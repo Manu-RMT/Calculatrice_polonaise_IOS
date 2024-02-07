@@ -10,11 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     var maPile : [Double] = []
-    var compteur_pile = 4
-    var compteur_valeur_saisie = 1
     @IBOutlet weak var info_saisie: UILabel!
     @IBOutlet weak var valeur_saisie: UITextField!
-        
+    
     @IBOutlet weak var operateur_plus: UIButton!
     @IBOutlet weak var operateur_moins: UIButton!
     @IBOutlet weak var operateur_diviser: UIButton!
@@ -38,15 +36,14 @@ class ViewController: UIViewController {
     @IBAction func clickDrop(_ sender: Any) {
     }
     
-    @IBAction func clickDigit(_ sender: Any) {
-        
+    @IBAction func clickDigit(_ sender: UIButton) {
+        let valeur_saisie = Double(valeur_saisie.text!) ?? 0
     }
     
     
     @IBAction func valide_click(_ sender: Any) {
-        let valeur_saisie = Double(valeur_saisie.text!) ?? 0
-        compteur_pile -= 1
-        compteur_valeur_saisie += 1
+      
+        
         info_saisie.text = "Saisissez la \(compteur_valeur_saisie) ieme valeur de la pile"
         
         //  ajout des valeurs saisies dans la pile
@@ -56,7 +53,7 @@ class ViewController: UIViewController {
         affichage_pile(valeur: String(valeur_saisie))
     }
     
-    func affichage_pile(valeur : String){
+    func affichage_pile(valeur : String) -> String{
         return ""
     }
     
