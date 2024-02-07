@@ -18,6 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var operateur_diviser: UIButton!
     @IBOutlet weak var operateur_multiplier: UIButton!
     
+    @IBOutlet weak var pile5: UILabel!
+    @IBOutlet weak var pile4: UILabel!
+    @IBOutlet weak var pile3: UILabel!
+    @IBOutlet weak var pile2: UILabel!
+    @IBOutlet weak var pile1: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,6 +34,7 @@ class ViewController: UIViewController {
     @IBAction func clickMinus(_ sender: Any) {
     }
     @IBAction func clickDiv(_ sender: Any) {
+        
     }
     @IBAction func clickMulti(_ sender: Any) {
     }
@@ -36,22 +43,25 @@ class ViewController: UIViewController {
     @IBAction func clickDrop(_ sender: Any) {
     }
     
+    // permet de saisir
     @IBAction func clickDigit(_ sender: UIButton) {
-        let valeur_saisie = Double(valeur_saisie.text!) ?? 0
+        let val = Double(sender.tag)
+        valeur_saisie.text = String(val)
+        
     }
     
-    
-    @IBAction func valide_click(_ sender: Any) {
-      
-        
-        info_saisie.text = "Saisissez la \(compteur_valeur_saisie) ieme valeur de la pile"
-        
-        //  ajout des valeurs saisies dans la pile
-        maPile.append(valeur_saisie)
-        
-        //  affichage du contenu de la pile
-        affichage_pile(valeur: String(valeur_saisie))
-    }
+//
+//    @IBAction func valide_click(_ sender: Any) {
+//
+//
+//        info_saisie.text = "Saisissez la \(compteur_valeur_saisie) ieme valeur de la pile"
+//
+//        //  ajout des valeurs saisies dans la pile
+//        maPile.append(valeur_saisie)
+//
+//        //  affichage du contenu de la pile
+//        affichage_pile(valeur: String(valeur_saisie))
+//    }
     
     func affichage_pile(valeur : String) -> String{
         return ""
