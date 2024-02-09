@@ -32,9 +32,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // additonne les deux derniers elemetns de la pile
     @IBAction func clickAdd(_ sender: Any) {
+        if ma_pile.nbElementPile() > 1 {
+            let value1 = ma_pile.getElementPile(position: 0)!.doubleValue
+            let value2 = ma_pile.getElementPile(position: 1)!.doubleValue
+            let somme = value1 + value2
+            ma_pile.depile()
+            ma_pile.depile()
+            ma_pile.empile_pile(nb_saisie: somme as NSNumber)
+            affichage_pile()
+        }
+            
     }
+    
     @IBAction func clickMinus(_ sender: Any) {
+        
     }
     @IBAction func clickDiv(_ sender: Any) {
         
@@ -46,17 +59,13 @@ class ViewController: UIViewController {
     @IBAction func clickEnter(_ sender: Any) {
         if (valeur_saisie.text != nil) {
             ma_pile.empile_pile(nb_saisie: NSNumber(value:  Double(valeur_saisie.text!)!))
-            pile1.text = ma_pile.getElementPile(position: 0)?.stringValue ?? "----"
-            pile2.text = ma_pile.getElementPile(position: 1)?.stringValue ?? "----"
-            pile3.text = ma_pile.getElementPile(position: 2)?.stringValue ?? "----"
-            pile4.text = ma_pile.getElementPile(position: 3)?.stringValue ?? "----"
-            pile5.text = ma_pile.getElementPile(position: 4)?.stringValue ?? "----"
+            affichage_pile()
             
             valeur_saisie.text = ""
         }
-       
-        
     }
+    
+    
     @IBAction func clickDrop(_ sender: Any) {
         
         
@@ -86,6 +95,14 @@ class ViewController: UIViewController {
     
     func saut_ligne() -> String{
         return "\r"
+    }
+    
+    func affichage_pile() {
+        pile1.text = ma_pile.getElementPile(position: 0)?.stringValue ?? "----"
+        pile2.text = ma_pile.getElementPile(position: 1)?.stringValue ?? "----"
+        pile3.text = ma_pile.getElementPile(position: 2)?.stringValue ?? "----"
+        pile4.text = ma_pile.getElementPile(position: 3)?.stringValue ?? "----"
+        pile5.text = ma_pile.getElementPile(position: 4)?.stringValue ?? "----"
     }
 }
 
