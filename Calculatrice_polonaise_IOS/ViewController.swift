@@ -64,7 +64,12 @@ class ViewController: UIViewController {
         let val = sender.tag
         valeur_saisie.text! += String(val)
     }
-        
+    
+    // nettoie la valeur saisie
+    @IBAction func clearSaisie(_ sender: Any) {
+        valeur_saisie.text = ""
+    }
+    
     func saut_ligne() -> String{
         return "\r"
     }
