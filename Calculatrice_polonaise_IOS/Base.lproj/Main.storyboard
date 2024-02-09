@@ -39,7 +39,9 @@
                                 <rect key="frame" x="264" y="526" width="45" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="+"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+">
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="clickAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q3D-VL-OcW"/>
                                 </connections>
@@ -48,27 +50,33 @@
                                 <rect key="frame" x="319" y="526" width="58" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="cos"/>
+                                <buttonConfiguration key="configuration" style="filled" title="cos">
+                                    <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="clickAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucf-SI-zto"/>
+                                    <action selector="clickCos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ezb-Ms-NQv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV8-pG-nyf">
                                 <rect key="frame" x="319" y="584" width="58" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="sin"/>
+                                <buttonConfiguration key="configuration" style="filled" title="sin">
+                                    <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="clickAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nF9-Gv-HSC"/>
+                                    <action selector="clickSin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fjD-cR-6m3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xW-IO-lIA">
                                 <rect key="frame" x="319" y="642" width="58" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="sqrt"/>
+                                <buttonConfiguration key="configuration" style="filled" title="sqrt">
+                                    <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="clickAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xS5-2S-1O0"/>
+                                    <action selector="clickRacine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9SP-fW-Lqi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EP-6O-yW2">
@@ -156,7 +164,9 @@
                                 <rect key="frame" x="264" y="584" width="45" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="-"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-">
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="clickMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1CP-wQ-eae"/>
                                 </connections>
@@ -165,7 +175,9 @@
                                 <rect key="frame" x="264" y="642" width="45" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="/"/>
+                                <buttonConfiguration key="configuration" style="filled" title="/">
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="clickDiv:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pdq-zx-AAu"/>
                                 </connections>
@@ -174,7 +186,9 @@
                                 <rect key="frame" x="264" y="700" width="45" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="*"/>
+                                <buttonConfiguration key="configuration" style="filled" title="*">
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="clickMulti:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vE7-EH-dhG"/>
                                 </connections>
@@ -286,7 +300,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPy-Ya-nzM">
-                                <rect key="frame" x="39" y="409" width="299" height="34"/>
+                                <rect key="frame" x="39" y="409" width="155" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -304,16 +318,27 @@
                                 <rect key="frame" x="319" y="700" width="58" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="pow"/>
+                                <buttonConfiguration key="configuration" style="filled" title="pow">
+                                    <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="clickAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JHY-vP-KYQ"/>
+                                    <action selector="clickPuisssance:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ca1-VH-v37"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-GJ-2Nn">
+                                <rect key="frame" x="210" y="409" width="148" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.15662528603405859" blue="0.084474151378467144" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" systemColor="systemPinkColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                     </view>
                     <connections>
+                        <outlet property="error_saisie" destination="Tby-GJ-2Nn" id="nug-Ge-qty"/>
                         <outlet property="operateur_diviser" destination="cJ3-CT-y1H" id="MWX-T5-J2g"/>
                         <outlet property="operateur_moins" destination="i7n-xy-al4" id="Dc5-n0-hky"/>
                         <outlet property="operateur_multiplier" destination="WxB-Wz-nci" id="0mA-Pc-d7g"/>
@@ -335,11 +360,17 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

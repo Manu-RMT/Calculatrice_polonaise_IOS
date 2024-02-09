@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pile2: UILabel!
     @IBOutlet weak var pile1: UILabel!
     
+    @IBOutlet weak var error_saisie: UILabel!
     
     var ma_pile = GestionPile()
     
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
     // additonne les deux derniers elemetns de la pile
     @IBAction func clickAdd(_ sender: Any) {
         if ma_pile.nbElementPile() > 1 {
+            error_saisie.isHidden = true
             let value1 = ma_pile.getElementPile(position: 0)!.doubleValue
             let value2 = ma_pile.getElementPile(position: 1)!.doubleValue
             let somme = value1 + value2
@@ -43,12 +45,16 @@ class ViewController: UIViewController {
             ma_pile.empile_pile(nb_saisie: somme as NSNumber)
             affichage_pile()
         }
+        else {
+            error_saisie_calculette()
+        }
             
     }
     
     // permemt de multiplier deux nombres
     @IBAction func clickMinus(_ sender: Any) {
         if ma_pile.nbElementPile() > 1 {
+            error_saisie.isHidden = true
             let value1 = ma_pile.getElementPile(position: 0)!.doubleValue
             let value2 = ma_pile.getElementPile(position: 1)!.doubleValue
             let soustraction = value1 - value2
@@ -57,11 +63,15 @@ class ViewController: UIViewController {
             ma_pile.empile_pile(nb_saisie: soustraction as NSNumber)
             affichage_pile()
         }
+        else {
+            error_saisie_calculette()
+        }
     }
     
     // permet de faire la divison
     @IBAction func clickDiv(_ sender: Any) {
         if ma_pile.nbElementPile() > 1 {
+            error_saisie.isHidden = true
             let value1 = ma_pile.getElementPile(position: 0)!.doubleValue
             let value2 = ma_pile.getElementPile(position: 1)!.doubleValue
             
@@ -75,11 +85,15 @@ class ViewController: UIViewController {
             ma_pile.empile_pile(nb_saisie: division as NSNumber)
             affichage_pile()
         }
+        else {
+            error_saisie_calculette()
+        }
     }
     
     // multiplication
     @IBAction func clickMulti(_ sender: Any) {
         if ma_pile.nbElementPile() > 1 {
+            error_saisie.isHidden = true
             let value1 = ma_pile.getElementPile(position: 0)!.doubleValue
             let value2 = ma_pile.getElementPile(position: 1)!.doubleValue
             let multi = value1 * value2
@@ -88,10 +102,15 @@ class ViewController: UIViewController {
             ma_pile.empile_pile(nb_saisie: multi as NSNumber)
             affichage_pile()
         }
+        else {
+            error_saisie_calculette()
+        }
+            
     }
     
     // permet d'alimenter la pile et d'afficher les elements dans la calculatrice
     @IBAction func clickEnter(_ sender: Any) {
+        error_saisie.isHidden = true
         if (valeur_saisie.text != nil) {
             ma_pile.empile_pile(nb_saisie: NSNumber(value:  Double(valeur_saisie.text!)!))
             affichage_pile()
@@ -124,8 +143,61 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func clickCos(_ sender: Any) {
+        if ma_pile.nbElementPile() != 0 {
+            let cos = cos(ma_pile.getElementPile(position: 0)!.doubleValue)
+            ma_pile.depile()
+            ma_pile.empile_pile(nb_saisie: cos as NSNumber)
+            affichage_pile()
+        }
+        else {
+            error_saisie_calculette()
+        }
+    }
     
+    @IBAction func clickSin(_ sender: Any) {
+        if ma_pile.nbElementPile() != 0 {
+            error_saisie.isHidden = true
+            let sin = sin(ma_pile.getElementPile(position: 0)!.doubleValue)
+            ma_pile.depile()
+            ma_pile.empile_pile(nb_saisie: sin as NSNumber)
+            affichage_pile()
+        }
+        else {
+            error_saisie_calculette()
+        }
+    }
     
+    @IBAction func clickRacine(_ sender: Any) {
+        if ma_pile.nbElementPile() != 0 {
+            error_saisie.isHidden = true
+            let racine = sqrt(ma_pile.getElementPile(position: 0)!.doubleValue)
+            ma_pile.depile()
+            ma_pile.empile_pile(nb_saisie: racine as NSNumber)
+            affichage_pile()
+        }
+        else {
+            error_saisie_calculette()
+        }
+        
+    }
+    
+    @IBAction func clickPuisssance(_ sender: Any) {
+        if ma_pile.nbElementPile() > 1 {
+            error_saisie.isHidden = true
+            let value1 = ma_pile.getElementPile(position: 0)!.doubleValue
+            let value2 = ma_pile.getElementPile(position: 1)!.doubleValue
+            let puissance = pow(value2,value1)
+            ma_pile.depile()
+            ma_pile.depile()
+            ma_pile.empile_pile(nb_saisie: puissance as NSNumber)
+            affichage_pile()
+        }
+        else {
+            error_saisie_calculette()
+        }
+        
+    }
     
     // nettoie la valeur saisie
     @IBAction func clearSaisie(_ sender: Any) {
@@ -143,6 +215,11 @@ class ViewController: UIViewController {
         pile3.text = ma_pile.getElementPile(position: 2)?.stringValue ?? "----"
         pile4.text = ma_pile.getElementPile(position: 3)?.stringValue ?? "----"
         pile5.text = ma_pile.getElementPile(position: 4)?.stringValue ?? "----"
+    }
+    
+    func error_saisie_calculette() {
+        error_saisie.isHidden = false
+        error_saisie.text = "Erreur !!!"
     }
 }
 
