@@ -217,6 +217,7 @@ class ViewController: UIViewController {
         pile5.text = ma_pile.getElementPile(position: 4)?.stringValue ?? "----"
     }
     
+    // message en cas d'erreur
     func error_saisie_calculette() {
         error_saisie.isHidden = false
         error_saisie.text = "Erreur !!!"
