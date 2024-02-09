@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var pile2: UILabel!
     @IBOutlet weak var pile1: UILabel!
     
+    
+    var ma_pile = GestionPile()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -41,32 +44,27 @@ class ViewController: UIViewController {
     @IBAction func clickEnter(_ sender: Any) {
     }
     @IBAction func clickDrop(_ sender: Any) {
-    }
-    
-    // permet de saisir
-    @IBAction func clickDigit(_ sender: UIButton) {
-        let val = Double(sender.tag)
-        valeur_saisie.text = String(val)
+        
         
     }
-    
-//
-//    @IBAction func valide_click(_ sender: Any) {
-//
-//
-//        info_saisie.text = "Saisissez la \(compteur_valeur_saisie) ieme valeur de la pile"
-//
-//        //  ajout des valeurs saisies dans la pile
-//        maPile.append(valeur_saisie)
-//
-//        //  affichage du contenu de la pile
-//        affichage_pile(valeur: String(valeur_saisie))
-//    }
-    
-    func affichage_pile(valeur : String) -> String{
-        return ""
+    @IBAction func clickVirgule(_ sender: Any) {
+        switch valeur_saisie.text! {
+        case "" : // permet de rajouter une valeur si on commence par ecrire une virgule
+            valeur_saisie.text = "0."
+        case let value where value.contains("."): // si ca contient deja une virgule on ne fait rien
+            print("Erreur de saisie")
+        default : // par defaut on ajoute un point
+            valeur_saisie.text! += "."
+            
+        }
     }
     
+    // permet d'afficher la valeur saisie
+    @IBAction func clickDigit(_ sender: UIButton) {
+        let val = sender.tag
+        valeur_saisie.text! += String(val)
+    }
+        
     func saut_ligne() -> String{
         return "\r"
     }

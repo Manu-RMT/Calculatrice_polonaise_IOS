@@ -19,7 +19,7 @@ class GestionPile {
     
     // depile le dernier élémént entré par l'utilisateur et retourne
     func depile() -> NSNumber? {
-        var last_element = maPile.last
+        let last_element = maPile.last
         maPile.removeLast()
         return last_element
     }
