@@ -46,13 +46,48 @@ class ViewController: UIViewController {
             
     }
     
+    // permemt de multiplier deux nombres
     @IBAction func clickMinus(_ sender: Any) {
-        
+        if ma_pile.nbElementPile() > 1 {
+            let value1 = ma_pile.getElementPile(position: 0)!.doubleValue
+            let value2 = ma_pile.getElementPile(position: 1)!.doubleValue
+            let soustraction = value1 - value2
+            ma_pile.depile()
+            ma_pile.depile()
+            ma_pile.empile_pile(nb_saisie: soustraction as NSNumber)
+            affichage_pile()
+        }
     }
+    
+    // permet de faire la divison
     @IBAction func clickDiv(_ sender: Any) {
-        
+        if ma_pile.nbElementPile() > 1 {
+            let value1 = ma_pile.getElementPile(position: 0)!.doubleValue
+            let value2 = ma_pile.getElementPile(position: 1)!.doubleValue
+            
+            var division : NSNumber = 0
+            if value1 != 0.0 {
+                division = value1 / value2 as NSNumber
+            }
+           
+            ma_pile.depile()
+            ma_pile.depile()
+            ma_pile.empile_pile(nb_saisie: division as NSNumber)
+            affichage_pile()
+        }
     }
+    
+    // multiplication
     @IBAction func clickMulti(_ sender: Any) {
+        if ma_pile.nbElementPile() > 1 {
+            let value1 = ma_pile.getElementPile(position: 0)!.doubleValue
+            let value2 = ma_pile.getElementPile(position: 1)!.doubleValue
+            let multi = value1 * value2
+            ma_pile.depile()
+            ma_pile.depile()
+            ma_pile.empile_pile(nb_saisie: multi as NSNumber)
+            affichage_pile()
+        }
     }
     
     // permet d'alimenter la pile et d'afficher les elements dans la calculatrice
@@ -67,6 +102,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func clickDrop(_ sender: Any) {
+        
         
         
     }
