@@ -33,7 +33,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="clickEnter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jgo-Fp-4G3"/>
-                                    <action selector="valide_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZCM-le-rxG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKU-Te-duH">
@@ -187,7 +186,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="clickDrop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="alh-kK-wcq"/>
-                                    <action selector="valide_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbe-8a-03s"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4L-vZ-wgb">

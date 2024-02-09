@@ -32,11 +32,11 @@ class GestionPile {
     // recupère le n ieme element dans la pile
     func getElementPile(position: Int) -> NSNumber? {
         // permet de ne pas faire un out of range lors de l'affichage
-        if maPile.count > position {
+        if maPile.count - 1 < position {
             return nil
         }
         else {
-            return maPile[0]
+            return maPile[maPile.count - 1 - position]
         }
     }
 }

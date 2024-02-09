@@ -41,7 +41,21 @@ class ViewController: UIViewController {
     }
     @IBAction func clickMulti(_ sender: Any) {
     }
+    
+    // permet d'alimenter la pile et d'afficher les elements dans la calculatrice
     @IBAction func clickEnter(_ sender: Any) {
+        if (valeur_saisie.text != nil) {
+            ma_pile.empile_pile(nb_saisie: NSNumber(value:  Double(valeur_saisie.text!)!))
+            pile1.text = ma_pile.getElementPile(position: 0)?.stringValue ?? "----"
+            pile2.text = ma_pile.getElementPile(position: 1)?.stringValue ?? "----"
+            pile3.text = ma_pile.getElementPile(position: 2)?.stringValue ?? "----"
+            pile4.text = ma_pile.getElementPile(position: 3)?.stringValue ?? "----"
+            pile5.text = ma_pile.getElementPile(position: 4)?.stringValue ?? "----"
+            
+            valeur_saisie.text = ""
+        }
+       
+        
     }
     @IBAction func clickDrop(_ sender: Any) {
         
