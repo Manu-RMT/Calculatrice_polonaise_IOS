@@ -142,7 +142,7 @@ class ViewController: UIViewController {
         valeur_saisie.text! += String(val)
     }
     
-    
+    // fait le cosinus
     @IBAction func clickCos(_ sender: Any) {
         if ma_pile.nbElementPile() != 0 {
             let cos = cos(ma_pile.getElementPile(position: 0)!.doubleValue)
@@ -155,6 +155,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // fait le sinus
     @IBAction func clickSin(_ sender: Any) {
         if ma_pile.nbElementPile() != 0 {
             error_saisie.isHidden = true
@@ -168,6 +169,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // fait la racine carré
     @IBAction func clickRacine(_ sender: Any) {
         if ma_pile.nbElementPile() != 0 {
             error_saisie.isHidden = true
@@ -182,6 +184,7 @@ class ViewController: UIViewController {
         
     }
     
+    // fait la puissance
     @IBAction func clickPuisssance(_ sender: Any) {
         if ma_pile.nbElementPile() > 1 {
             error_saisie.isHidden = true
