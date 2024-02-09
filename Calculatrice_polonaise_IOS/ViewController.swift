@@ -100,11 +100,10 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    // supprime la derniere element de la pile
     @IBAction func clickDrop(_ sender: Any) {
-        
-        
-        
+        ma_pile.depile()
+        affichage_pile()
     }
     @IBAction func clickVirgule(_ sender: Any) {
         switch valeur_saisie.text! {
@@ -124,6 +123,10 @@ class ViewController: UIViewController {
         valeur_saisie.text! += String(val)
     }
     
+    
+    
+    
+    
     // nettoie la valeur saisie
     @IBAction func clearSaisie(_ sender: Any) {
         valeur_saisie.text = ""
@@ -133,6 +136,7 @@ class ViewController: UIViewController {
         return "\r"
     }
     
+    // affiche les elements de pile
     func affichage_pile() {
         pile1.text = ma_pile.getElementPile(position: 0)?.stringValue ?? "----"
         pile2.text = ma_pile.getElementPile(position: 1)?.stringValue ?? "----"
