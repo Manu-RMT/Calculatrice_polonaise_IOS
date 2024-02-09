@@ -16,6 +16,7 @@
 		B954CF042B7244150064A767 /* Calculatrice_polonaise_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954CF032B7244150064A767 /* Calculatrice_polonaise_IOSTests.swift */; };
 		B954CF0E2B7244150064A767 /* Calculatrice_polonaise_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954CF0D2B7244150064A767 /* Calculatrice_polonaise_IOSUITests.swift */; };
 		B954CF102B7244150064A767 /* Calculatrice_polonaise_IOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954CF0F2B7244150064A767 /* Calculatrice_polonaise_IOSUITestsLaunchTests.swift */; };
+		B9F87CC32B76791900751D53 /* ClassStackRPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F87CC22B76791900751D53 /* ClassStackRPN.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B954CF092B7244150064A767 /* Calculatrice_polonaise_IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Calculatrice_polonaise_IOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B954CF0D2B7244150064A767 /* Calculatrice_polonaise_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculatrice_polonaise_IOSUITests.swift; sourceTree = "<group>"; };
 		B954CF0F2B7244150064A767 /* Calculatrice_polonaise_IOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculatrice_polonaise_IOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9F87CC22B76791900751D53 /* ClassStackRPN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassStackRPN.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				B954CEEE2B7244130064A767 /* SceneDelegate.swift */,
 				B954CEF02B7244130064A767 /* ViewController.swift */,
 				B954CEF22B7244130064A767 /* Main.storyboard */,
+				B9F87CC22B76791900751D53 /* ClassStackRPN.swift */,
 				B954CEF52B7244140064A767 /* Assets.xcassets */,
 				B954CEF72B7244140064A767 /* LaunchScreen.storyboard */,
 				B954CEFA2B7244140064A767 /* Info.plist */,
@@ -260,6 +263,7 @@
 			files = (
 				B954CEF12B7244130064A767 /* ViewController.swift in Sources */,
 				B954CEED2B7244130064A767 /* AppDelegate.swift in Sources */,
+				B9F87CC32B76791900751D53 /* ClassStackRPN.swift in Sources */,
 				B954CEEF2B7244130064A767 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

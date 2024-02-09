@@ -1,4 +1,4 @@
-//
+    //
 //  ViewController.swift
 //  Calculatrice_polonaise_IOS
 //
@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var maPile : [Double] = []
     @IBOutlet weak var info_saisie: UILabel!
     @IBOutlet weak var valeur_saisie: UITextField!
     
@@ -18,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var operateur_diviser: UIButton!
     @IBOutlet weak var operateur_multiplier: UIButton!
     
+    // Les différentes zones d'affichage
     @IBOutlet weak var pile5: UILabel!
     @IBOutlet weak var pile4: UILabel!
     @IBOutlet weak var pile3: UILabel!
