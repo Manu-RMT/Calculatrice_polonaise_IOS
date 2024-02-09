@@ -57,7 +57,7 @@ class ViewController: UIViewController {
             error_saisie.isHidden = true
             let value1 = ma_pile.getElementPile(position: 0)!.doubleValue
             let value2 = ma_pile.getElementPile(position: 1)!.doubleValue
-            let soustraction = value1 - value2
+            let soustraction = value2 - value1
             ma_pile.depile()
             ma_pile.depile()
             ma_pile.empile_pile(nb_saisie: soustraction as NSNumber)
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
             
             var division : NSNumber = 0
             if value1 != 0.0 {
-                division = value1 / value2 as NSNumber
+                division = value2 / value1 as NSNumber
             }
            
             ma_pile.depile()
